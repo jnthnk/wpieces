@@ -1,21 +1,18 @@
 import Link from 'next/link'
-import { FC } from 'react'
+import links from '@/contents/links'
+import type { FC } from 'react'
 
 const Header: FC<HeaderProps> = ({}) => (
   <header>
     <nav>
-      <ul>
-        <li>
-          <Link passHref href='/'>
-            <a>Home</a>
-          </Link>
-        </li>
-        <li>
-          <a>Code snippets</a>
-        </li>
-        <li>
-          <a>The project</a>
-        </li>
+      <ul className='flex leading-4'>
+        {links.map(({ href, label }) => (
+          <li key={href} className='block'>
+            <Link passHref href={href}>
+              <a>{label}</a>
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   </header>

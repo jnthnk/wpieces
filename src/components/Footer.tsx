@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-const Footer: FC<FooterProps> = ({}) => (
+const Footer: FC<FooterProps> = () => (
   <footer>
     <nav>
       <ul>
