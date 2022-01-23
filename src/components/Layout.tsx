@@ -1,11 +1,15 @@
-import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import Header from '@/components/Header'
+import Sidebar from '@/components/Sidebar'
 import { FC } from 'react'
 
 const Layout: FC<LayoutProps> = ({ children }) => (
   <>
     <Header />
-    <main>{children}</main>
+    <main className='relative overflow-hidden z-10 sm:pt-20 md:pr-[200px]'>
+      {children}
+      <Sidebar />
+    </main>
     <Footer />
   </>
 )

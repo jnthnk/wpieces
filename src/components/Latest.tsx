@@ -1,7 +1,7 @@
 import Title from '@/components/Title'
 import { FC } from 'react'
 
-const Archive: FC<ArchiveProps> = ({ title }) => (
+const Latest: FC<LatestProps> = ({ title }) => (
   <section className='p-8 md:px-12 xl:px-16'>
     <Title tag='h2' className='mb-2'>
       {title}
@@ -10,9 +10,9 @@ const Archive: FC<ArchiveProps> = ({ title }) => (
   </section>
 )
 
-type ArchiveProps = {
+type LatestProps = {
   title: string
   children?: undefined
 }
 
-export default Archive
+export default Latest

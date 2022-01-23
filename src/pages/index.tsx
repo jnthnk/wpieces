@@ -1,15 +1,15 @@
-import Layout from '@/components/Layout'
+import Latest from '@/components/Latest'
 import Welcome from '@/components/Welcome'
-import Archive from '@/components/Archive'
+import PageProvider from '@/components/PageProvider'
 import type { FC } from 'react'
 import type { PageProps } from '@/types/PageProps'
 
-const HomePage: FC<HomePage> = ({ name }) => (
-  <Layout>
+const HomePage: FC<HomePage> = ({}) => (
+  <PageProvider name='home'>
     <Welcome />
-    <Archive title='Most popular snippets' />
-    <Archive title='Last snippets submitted' />
-  </Layout>
+    <Latest title='Most popular snippets' />
+    <Latest title='Last snippets submitted' />
+  </PageProvider>
 )
 
 type HomePage = PageProps & {}

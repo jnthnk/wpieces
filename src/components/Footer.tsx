@@ -1,9 +1,9 @@
 import { FC } from 'react'
 
 const Footer: FC<FooterProps> = () => (
-  <footer>
-    <nav>
-      <ul>
+  <footer className='relative overflow-hidden z-0 text-white bg-gray-900'>
+    <nav className='p-8 md:px-12 xl:px-16'>
+      <ul className='flex'>
         <li>
           <a>Home</a>
         </li>

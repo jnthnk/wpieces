@@ -2,10 +2,11 @@ import Title from '@/components/Title'
 import { FC } from 'react'
 
 const Welcome: FC<WelcomeProps> = ({}) => (
-  <header className='p-8'>
-    <Title size='lg' className='mb-6'>
-      <span className='underline underline-offset-4'>Code snippets</span> for WordPress developers
-      that <span className='underline underline-offset-4'>just works</span>:
+  <header className='px-8 md:px-12 xl:px-16 py-12 md:py-14 xl:py-16 bg-gray-100 border-b border-gray-500'>
+    <Title size='lg' className='mb-8 text-primary-800'>
+      <span className='underline underline-offset-4'>Code snippets</span>
+      {' for WordPress that '}
+      <span className='underline underline-offset-4'>just works</span>:
     </Title>
     <p className='mb-2 text-lg font-bold'>
       Finding the right piece of code to implement that plugin / theme / hook / filter can be hard.

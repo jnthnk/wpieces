@@ -3,13 +3,12 @@ import PageProvider from '@/components/PageProvider'
 import type { FC } from 'react'
 import type { PageProps } from '@/types/PageProps'
 
-const AboutPage: FC<AboutPageProps> = ({}) => (
+const ArchivePage: FC<ArchivePage> = ({}) => (
   <PageProvider name='project'>
     <Archive title='About this Project' />
   </PageProvider>
 )
 
-type AboutPageProps = PageProps & {}
+type ArchivePage = PageProps & {}
 
-export default AboutPage
-export type { AboutPageProps }
+export default ArchivePage
