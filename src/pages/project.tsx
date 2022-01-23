@@ -1,11 +1,10 @@
-import Layout from '@/components/Layout'
 import type { FC } from 'react'
 import type { PageProps } from '@/types/PageProps'
 
 const HomePage: FC<HomePage> = ({ name }) => (
-  <Layout>
+  <div>
     <h1>Home Page</h1>
-  </Layout>
+  </div>
 )
 
 type HomePage = PageProps & {}
