@@ -4,7 +4,7 @@ const path = require('path')
 const { v4: uuidv4 } = require('uuid');
 
 // lib to parse metadata
-const metadataParser = require('markdown-yaml-metadata-parser');
+const matter = require('gray-matter');
 
 // file system api
 const fs = require('fs').promises;
@@ -62,13 +62,13 @@ readDir(snippetsDir).then(files => {
         
         results.forEach(result => {
 
-            let metadataParserRes = metadataParser(result);
+            let metadataParserRes = matter(result);
 
             jsonData.push({
                 'id' : Date.now(), // leaving just Date.now for now.
-                'title' : metadataParserRes.metadata.title,
-                'published' : metadataParserRes.metadata.date,
-                'tags' : metadataParserRes.metadata.tags,
+                'title' : metadataParserRes.data.title,
+                'published' : metadataParserRes.data.date,
+                'tags' : metadataParserRes.data.tags,
                 // we might not really need this but can be useful if we wanted to use this for search as well.
                 'content' : metadataParserRes.content,
                 'views' : 0
