@@ -10,7 +10,7 @@ const Header: FC<HeaderProps> = ({}) => (
         <a className='block mr-12'>WPieces</a>
       </Link>
       <ul className='flex flex-wrap -my-3 -mx-4 tracking-widest uppercase'>
-        <li className='hidden lg:block py-3 px-4'>
+        <li className='hidden md:block py-3 px-4'>
           <Link passHref href='/'>
             <a className='block p-1 -m-1 font-bold'>Home</a>
           </Link>
@@ -18,11 +18,6 @@ const Header: FC<HeaderProps> = ({}) => (
         <li className='block py-3 px-4'>
           <Link passHref href='/snippets'>
             <a className='block p-1 -m-1 font-bold md:before:content-["code_"]'>Snippets</a>
-          </Link>
-        </li>
-        <li className='block py-3 px-4'>
-          <Link passHref href='/tags'>
-            <a className='block p-1 -m-1 font-bold'>Tags</a>
           </Link>
         </li>
         <li className='block py-3 px-4'>

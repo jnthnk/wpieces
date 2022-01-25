@@ -1,19 +1,16 @@
 import fs from 'fs'
 import path from 'path'
-import { marked } from 'marked'
 import matter from 'gray-matter'
+import Single from '@/components/Single'
 import PageProvider from '@/components/PageProvider'
 import type { FC } from 'react'
 import type { GetStaticPaths, GetStaticProps } from 'next'
 import type { PageProps } from '@/types/PageProps'
 
-const SinglePage: FC<SinglePageProps> = ({ code, content }) => {
+const SinglePage: FC<SinglePageProps> = ({ code, tags, title, content }) => {
   return (
     <PageProvider name='single'>
-      <div className='px-8 md:px-12 xl:px-16 py-12 md:py-14 xl:py-16'>
-        Single: {code}
-        <div dangerouslySetInnerHTML={{ __html: marked(content) }} className='prose' />
-      </div>
+      <Single tags={tags} title={title} content={content} />
     </PageProvider>
   )
 }
@@ -37,11 +34,12 @@ const getStaticProps: GetStaticProps = ({ params }) => {
   const dir = path.resolve(`./src/snippets/${code}.md`)
   const file = fs.readFileSync(dir, 'utf-8')
   const { data, content } = matter(file)
-  console.log(data)
-
+  const { tags, title } = data
   return {
     props: {
       code,
+      tags,
+      title,
       content
     }
   }
@@ -49,6 +47,8 @@ const getStaticProps: GetStaticProps = ({ params }) => {
 
 type SinglePageProps = PageProps & {
   code: string
+  tags: string[]
+  title: string
   content: string
 }
 
