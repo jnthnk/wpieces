@@ -13,7 +13,7 @@ const fs = require('fs').promises;
 const jsonData = []
 
 // relative snippets dir
-const snippetsDir = path.resolve(`./src/snippets`)
+const snippetsDir = path.resolve(`./../snippets`)
 
 // reads the dir and gets all of the files found in this dir
 const readDir = snippetsDir => {
@@ -22,13 +22,13 @@ const readDir = snippetsDir => {
 
 // reads individual file and returns a promise
 const readFile = file => { 
-    return fs.readFile(path.resolve(`./src/snippets/${file}`), 'utf8');
+    return fs.readFile(path.resolve(`./../snippets/${file}`), 'utf8');
 }
 
 // writes to file and returns a promise
 const writeToFile = jsonData => {
 
-    return fs.writeFile("./src/contents/snippets.json", JSON.stringify(jsonData), function(err) {
+    return fs.writeFile("./../contents/snippets.json", JSON.stringify(jsonData), function(err) {
         if(err) {
             return console.log(err);
         }
@@ -40,8 +40,8 @@ const writeToFile = jsonData => {
 // not really using this now but keeping it if we need it later on to move files.
 const moveFile = (fileName, oldPath, newPath) => {
 
-    var oldPath = path.resolve(`./src/snippets/${fileName}`)
-    var newPath = path.resolve(`./src/snippets/${fileName}`)
+    var oldPath = path.resolve(`./../snippets/${fileName}`)
+    var newPath = path.resolve(`./../snippets/${fileName}`)
     
     return fs.rename(oldPath, newPath)
 
@@ -61,7 +61,7 @@ readDir(snippetsDir).then(files => {
     Promise.all(promises).then(results => {
         
         results.forEach(result => {
-            console.log(result)
+
             let metadataParserRes = metadataParser(result);
 
             jsonData.push({

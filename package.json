@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "gen-json": "node json-list-generator.js"
+    "gen-json": "node ./scripts/list.js"
   },
   "keywords": [],
   "author": "",
