@@ -1,16 +1,1 @@
-[
-  {
-    "ID": 220123,
-    "title": "How to disable Gutenberg without plugins?",
-    "published": "01-23-2022",
-    "tags": ["Core"],
-    "views": 0
-  },
-  {
-    "ID": 220124,
-    "title": "How to disable Gutenberg without plugins?",
-    "published": "01-23-2022",
-    "tags": ["Core"],
-    "views": 0
-  }
-]
+[{"id":"0123-2022","title":"How to disable Gutenberg without plugins?","published":"01-23-2022","tags":["Core","Editor"],"content":"\r\n## I'm here now\r\n\r\nHey! Whats up?\r\n","views":0},{"id":"0123-2022","title":"How to disable Gutenberg without pluginss?","published":"01-23-2022","tags":["Core","Editor"],"content":"\r\n## I'm here now\r\n\r\nHey! Whats up?\r\n","views":0}]
