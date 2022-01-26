@@ -2,7 +2,7 @@ import type { FC } from 'react'
 
 const Title: FC<TitleProps> = ({ tag: Tag = 'h1', size = 'md', children, className }) => (
   <Tag
-    className={`block text-primary-700 dark:text-white font-bold tracking-wider ${
+    className={`block text-primary-700 dark:text-primary-400 font-bold tracking-wider ${
       size === 'xs'
         ? 'text-lg'
         : size === 'sm'

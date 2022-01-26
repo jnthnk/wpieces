@@ -4,7 +4,7 @@ import type { FC } from 'react'
 const Document: FC = () => (
   <Html className='tracking-wide md:text-[17px] xl:text-[18px] scroll-smooth'>
     <Head />
-    <body className='min-w-[320px] sm:pt-20 md:pr-[200px] text-white bg-gray-900'>
+    <body className='min-w-[320px] text-white bg-gray-900'>
       <Main />
       <NextScript />
     </body>

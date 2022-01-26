@@ -13,8 +13,9 @@ const Single: FC<SingleProps> = ({ title, content }) => {
 
 type SingleProps = {
   ID: number
-  title: string
   tags?: string[]
+  title: string
+  views: number
   content: string
   children?: undefined
 }

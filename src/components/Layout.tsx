@@ -10,11 +10,13 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     <>
       <Header />
       <main
-        className={`relative overflow-hidden z-10 text-gray-800 bg-gray-100 md:rounded-br-lg shadow-lg${
+        className={`flex w-full relative overflow-hidden z-10 sm:pt-20 sm:pb-4${
           dark ? ' dark' : ''
         }`}
       >
-        {children}
+        <div className='w-full text-gray-800 dark:text-gray-100 bg-gray-100 dark:bg-gray-800 rounded-br-2xl transition-colors'>
+          {children}
+        </div>
         <Sidebar />
       </main>
       <Footer />

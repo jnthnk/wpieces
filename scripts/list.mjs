@@ -11,6 +11,7 @@ try {
       date: data.date,
       tags: data.tags,
       title: data.title,
+      views: 0,
       content
     }
   })
