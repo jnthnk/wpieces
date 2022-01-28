@@ -1,6 +1,11 @@
 import Icon from '@/components/Icon'
 import useDataContext from '@/hooks/useDataContext'
+import Cookies from 'universal-cookie'
 import type { FC } from 'react'
+
+const cookies = new Cookies()
+const date = new Date()
+const expiresDate = date.setDate(date.getDate() + 60) // expires in 60 days
 
 const Toggle: FC<ToggleProps> = ({ className }) => {
   const { dark, darkUpdate } = useDataContext()
@@ -12,6 +17,7 @@ const Toggle: FC<ToggleProps> = ({ className }) => {
       type='button'
       onClick={() => {
         darkUpdate(!dark)
+        cookies.set('wpieces-dark-mode', !dark, { path: '/', expires: new Date(expiresDate) })
       }}
     >
       {dark ? 'Dark ON' : 'Dark OFF'}
