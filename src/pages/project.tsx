@@ -1,11 +1,11 @@
-import Archive from '@/components/Archive'
+import About from '@/components/About'
 import PageProvider from '@/components/PageProvider'
 import type { FC } from 'react'
 import type { PageProps } from '@/types/PageProps'
 
 const AboutPage: FC<AboutPageProps> = ({}) => (
   <PageProvider name='project'>
-    <Archive title='About this Project' />
+    <About />
   </PageProvider>
 )
 

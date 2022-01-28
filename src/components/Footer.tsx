@@ -1,8 +1,9 @@
+import Toggle from '@/components/Toggle'
 import { FC } from 'react'
 
 const Footer: FC<FooterProps> = () => (
   <footer className='relative overflow-hidden z-0'>
-    <nav className='p-8 md:px-12 xl:px-16'>
+    <div className='p-8 md:px-12 xl:px-16'>
       <ul className='flex'>
         <li>
           <a>Home</a>
@@ -14,7 +15,8 @@ const Footer: FC<FooterProps> = () => (
           <a>The project</a>
         </li>
       </ul>
-    </nav>
+      <Toggle />
+    </div>
   </footer>
 )
 

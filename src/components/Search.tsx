@@ -3,10 +3,10 @@ import type { FC } from 'react'
 
 const Search: FC<SearchProps> = () => {
   return (
-    <form className='absolute overflow-hidden top-5 right-8 flex text-gray-800 rounded shadow'>
+    <form className='relative overflow-hidden -my-2 ml-auto lg:ml-4 flex text-gray-800 rounded shadow'>
       <input
         required
-        className='block outline-none bg-gray-200 hover:bg-gray-100 focus:bg-white h-10 px-3 py-2 tracking-wider transition-colors'
+        className='block outline-none bg-gray-200 hover:bg-gray-100 focus:bg-white w-20 lg:w-56 xl:w-64 2xl:w-80 h-10 px-3 py-2 tracking-wider transition-colors'
         placeholder='Search snippets...'
       />
       <button
