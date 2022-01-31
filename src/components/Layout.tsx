@@ -10,7 +10,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     <>
       <Header />
       <main
-        className={`flex w-full relative overflow-hidden z-10 sm:pt-20 sm:pb-4${
+        className={`flex w-full relative overflow-hidden z-10 sm:pt-[5.5rem] sm:pb-4${
           dark ? ' dark' : ''
         }`}
       >
